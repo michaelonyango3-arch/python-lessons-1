@@ -89,6 +89,14 @@ def weekly_report(name, steps_list, goal=8000):
 weekly_report("James", [9200, 7500, 10500, 8800, 6900, 11000, 9600])
 weekly_report("Sandra", [10000, 10200, 9800, 11000, 9500], goal=10000)
 
+def grade_report(student, scores, passing=50):
+    passed = sum(1 for s in scores if s >= passing)
+    print(f"{student}: {passed}/{len(scores)} tests passed")
+
+grade_report("Tom", [45, 62, 70, 38, 90])
+grade_report("Priya", [65, 72, 55, 80], passing=60)
+
+
 
 
 
